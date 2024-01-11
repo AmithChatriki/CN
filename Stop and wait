@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+int i,f,frames[50];
+printf("\n Enter number of frames to transmit: ");
+scanf("%d",&f);
+printf("\n Enter the %d frames: ",f);
+for(i=1;i<=f;i++)
+scanf("%d",&frames[i]);
+for(i=1;i<=f;i++)
+{
+if((random()%2)==1)
+{
+printf("%d\n",frames[i]);
+printf("Acknowledgement of above frames sent is recived by
+sender\n\n");
+}
+else
+{
+sleep(3);
+printf("negative acknowledgement resend %d frame\n",i);
+i=i-1;
+sleep(1);
+}
+}
+return 0;
+}
