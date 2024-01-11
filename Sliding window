@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+int w,i,f,frames[50];
+printf("Enter Window Size: ");
+scanf("%d",&w);
+printf("\n Enter number of frames to transmit: ");
+scanf("%d",&f);
+printf("\n Enter the %d frames: ",f);
+for(i=1;i<=f;i++)
+scanf("%d",&frames[i]);
+for(i=1;i<=f;i++)
+{
+if(i%w==0)
+{
+printf("%d\n", frames[i]);
+printf("Acknowledgment of above frames sent is recived by
+sender\n\n");
+}
+else
+printf("%d\n",frames[i]);
+}
+if(f%w!=0)
+printf("Acknowledgment of above frames sent is recived by
+sender\n\n");
+return 0;
